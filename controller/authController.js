@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const secrets = require("../secrets");
+const secrets = process.env || require("../secrets");
 const FooduserModel = require("../model/userModel");
 const mailSender = require("../utilities/mailSender")
 // ************************controller functions************************
