@@ -10,7 +10,7 @@ const userRouter = require("./routes/userRoutes");
 const authRouter = require("./routes/authRoutes");
 const planRouter = require("./routes/planRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
-const bookingRouter = require("./routes/bookingRoutes")
+const bookingRouter = require("./routes/bookingRoutes");
 // to  add post body data to req.body
 app.use(express.json());
 // res -> header -> set
