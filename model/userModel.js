@@ -6,6 +6,7 @@
 const mongoose = require('mongoose'); //npm i mongoose
 // db server link -> mongodb atlas ka link
 let DB_LINK = process.env.DB_LINK || require("../secrets").DB_LINK;
+
 // db  server connect -> mongodbAtlas connect 
 mongoose
     .connect(DB_LINK)
@@ -50,8 +51,7 @@ let userSchema = new mongoose.Schema({
     },
     pic: {
         type: String,
-        default: "dp.jpg",
-
+        default: "dp.png",
     },
     otp: {
         type: String
@@ -61,6 +61,11 @@ let userSchema = new mongoose.Schema({
     },
     address: {
         type: String,
+    },
+    bookings: {
+        //   array of object id 
+        type: [mongoose.Schema.ObjectId],
+        ref: "FoodbookingModel"
     }
 })
 // product Knowledge
